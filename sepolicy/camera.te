@@ -19,9 +19,10 @@ allow camera system_data_file:dir remove_name;
 allow camera system_data_file:sock_file unlink;
 
 # All others under /data get camera_data_file
-file_type_auto_trans(camera, system_data_file, camera_data_file);
-allow camera camera_data_file:dir { write add_name };
-allow camera camera_data_file:file create_file_perms;
+#Unsupported in Ubuntu Phone (!?!?)
+#file_type_auto_trans(camera, system_data_file, camera_data_file);
+#allow camera camera_data_file:dir { write add_name };
+#allow camera camera_data_file:file create_file_perms;
 
 # Connect to /data/app/sensor_ctl_socket
 unix_socket_connect(camera, sensors, sensors)

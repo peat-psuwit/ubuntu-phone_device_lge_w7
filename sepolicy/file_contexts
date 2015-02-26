@@ -89,4 +89,5 @@
 
 # PDS partition
 /pds(/.*)?                     u:object_r:pds_file:s0
-/pds/camera(/.*)?              u:object_r:camera_data_file:s0
+#Unsupported in Ubuntu Phone (!?!?)
+#/pds/camera(/.*)?              u:object_r:camera_data_file:s0

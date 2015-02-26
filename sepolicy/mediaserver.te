@@ -1,4 +1,5 @@
-allow mediaserver camera_data_file:sock_file w_file_perms;
+#Unsupported in Ubuntu Phone (!?!?!?)
+#allow mediaserver camera_data_file:sock_file w_file_perms;
 allow mediaserver device:sock_file write;
 
 qmux_socket(mediaserver)
@@ -12,4 +13,5 @@ allow mediaserver diagnostic_device:chr_file rw_file_perms;
 
 allow mediaserver system_data_file:file { write open };
 allow mediaserver camera_device:dir search;
-allow mediaserver camera_data_file:dir search;
+#Unsupported in Ubuntu Phone (!?!?!?)
+#allow mediaserver camera_data_file:dir search;

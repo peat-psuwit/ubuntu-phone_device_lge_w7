@@ -31,6 +31,7 @@ allow sensors system_data_file:file { write open };
 allow sensors input_device:chr_file { read ioctl open };
 allow sensors input_device:dir { read open };
 allow sensors cgroup:dir { add_name create };
-allow sensors sysfs_wake_lock:file { append open };
+#Unsupported in Ubuntu Phone (!?!?)
+#allow sensors sysfs_wake_lock:file { append open };
 allow sensors shared_log_device:chr_file { read write };
 allow sensors sensors:socket { create };
