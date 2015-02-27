@@ -58,8 +58,10 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE -DLG_CAMERA_HARDWARE
 
 # QCOM BSP
-TARGET_USES_QCOM_BSP := true
-COMMON_GLOBAL_CFLAGS += -DQCOM_BSP
+# Some part in Ubuntu Phone (e.g. libhardware) don't understand this.
+# Let's comment it out.
+#TARGET_USES_QCOM_BSP := true
+#COMMON_GLOBAL_CFLAGS += -DQCOM_BSP
 
 # Audio
 AUDIO_FEATURE_DISABLED_FM := false
