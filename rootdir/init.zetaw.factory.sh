@@ -182,6 +182,8 @@
     chown -h system.system /sys/class/timed_output/vibrator/enable
     chown -h system.system /sys/class/leds/keyboard-backlight/brightness
     chown -h system.system /sys/class/leds/lcd-backlight/brightness
+    #Change for Ubuntu Phone (How Ubuntu know the path?)
+    chmod 0666 /sys/class/leds/lcd-backlight/brightness
     chown -h system.system /sys/class/leds/button-backlight/brightness
     chown -h system.system /sys/class/leds/jogball-backlight/brightness
     chown -h system.system /sys/class/leds/red/brightness
