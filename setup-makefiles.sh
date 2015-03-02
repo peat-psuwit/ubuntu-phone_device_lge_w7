@@ -69,9 +69,6 @@ DEVICE_PACKAGE_OVERLAYS := vendor/$VENDOR/$DEVICE/overlay
 
 #com.qualcomm.services.location
 
-#This is needed for shipped audio.primary.msm8226.so
-PRODUCT_PACKAGES += libaudioroute
-
 \$(call inherit-product, vendor/$VENDOR/$DEVICE/$DEVICE-vendor-blobs.mk)
 EOF
 

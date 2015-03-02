@@ -392,5 +392,11 @@ PRODUCT_COPY_FILES += \
     device/lge/w7/ubuntu/display.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf \
     device/lge/w7/ubuntu/apparmor_video:system/ubuntu/usr/share/apparmor/hardware/video.d/apparmor-easyprof-ubuntu_android
 
+#This is needed for shipped audio.primary.msm8226.so
+PRODUCT_PACKAGES += libaudioroute
+
+#This is needed for shipped gps.default.so
+PRODUCT_PACKAGES += libandroid_runtime
+
 $(call inherit-product, vendor/lge/w7/w7-vendor.mk)
 
