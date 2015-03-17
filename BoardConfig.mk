@@ -233,3 +233,5 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
 	BOARD_SEPOLICY_UNION += su.te
 endif
 
+#Ubuntu: skip GPG verification because there isn't our own system-image yet.
+TARGET_RECOVERY_SKIP_GPG_VERIFICATION := true
