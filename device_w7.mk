@@ -390,7 +390,7 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 PRODUCT_COPY_FILES += \
     device/lge/w7/ubuntu/udev.rules:system/ubuntu/lib/udev/rules.d/70-android.rules \
     device/lge/w7/ubuntu/display.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf \
-    device/lge/w7/ubuntu/apparmor_video:system/ubuntu/usr/share/apparmor/hardware/video.d/apparmor-easyprof-ubuntu_android
+    device/lge/w7/ubuntu/init/ubuntu-location-service.override:system/ubuntu/etc/init/ubuntu-location-service.override
 
 #This is needed for shipped audio.primary.msm8226.so
 PRODUCT_PACKAGES += libaudioroute
