@@ -392,6 +392,9 @@ PRODUCT_COPY_FILES += \
     device/lge/w7/ubuntu/display.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf \
     device/lge/w7/ubuntu/init/ubuntu-location-service.override:system/ubuntu/etc/init/ubuntu-location-service.override
 
+# This kickstart wlan module in kernel.
+PRODUCT_COPY_FILES += device/lge/w7/init_wlan.sh:system/etc/init_wlan.sh
+
 #This is needed for shipped audio.primary.msm8226.so
 PRODUCT_PACKAGES += libaudioroute
 
