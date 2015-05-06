@@ -136,3 +136,6 @@ ACTION=="add", KERNEL=="uio0", OWNER="system", GROUP="system", MODE="0660"
 ACTION=="add", KERNEL=="uio1", OWNER="system", GROUP="system", MODE="0660"
 ACTION=="add", KERNEL=="uio2", OWNER="system", GROUP="system", MODE="0660"
 ACTION=="add", KERNEL=="tspdrv", OWNER="system", GROUP="system", MODE="0660"
+
+#This is the rule to add android specific video device's link. This behavior is hard-coded in ueventd, so this probably should be in upstream. For now, just include it here.
+SUBSYSTEM=="video4linux", ATTR{link_name}=="?*", SYMLINK+="video/$attr{link_name}"
