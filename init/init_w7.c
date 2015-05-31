@@ -61,12 +61,12 @@ int check_cmdline(char param[]) {
                         word = strtok(NULL, delims);
                 }
         }
-    }	
+    }
     fclose(file);
     return 0;
 }
 
- 
+
 void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *board_type)
 {
     char serial[PROP_VALUE_MAX];
@@ -91,6 +91,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.build.description", "w7ds_global_com-user 4.4.2 KOT49I.A1398228431 1398228431 release-keys");
         property_set("ro.build.fingerprint", "lge/w7ds_global_com/w7ds:4.4.2/KOT49I.A1398228431/1398228431:user/release-keys");
         property_set("persist.radio.multisim.config", "dsds");
+        property_set("ril.num_slots", "2");
         property_set("telephony.lteOnCdmaDevice", "0");
     } else if (strncmp(serial, "LGD405", 6) == 0) {
         /* D405, D405n */
@@ -112,6 +113,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
                 property_set("ro.product.device", "w7nds");
                 property_set("ro.product.model", "LG-D415n");
                 property_set("persist.radio.multisim.config", "dsds");
+                property_set("ril.num_slots", "2");
         } else {
                 property_set("ro.product.device", "w7");
                 property_set("ro.product.model", "LG-D415");
