@@ -389,8 +389,7 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 # Ubuntu Overlay Files
 PRODUCT_COPY_FILES += \
     device/lge/w7/ubuntu/udev.rules:system/ubuntu/lib/udev/rules.d/70-android.rules \
-    device/lge/w7/ubuntu/display.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf \
-    device/lge/w7/ubuntu/init/ubuntu-location-service.override:system/ubuntu/etc/init/ubuntu-location-service.override
+    device/lge/w7/ubuntu/display.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf 
 
 # This kickstart wlan module in kernel.
 PRODUCT_COPY_FILES += device/lge/w7/init_wlan.sh:system/etc/init_wlan.sh
