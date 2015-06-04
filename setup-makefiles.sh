@@ -27,17 +27,16 @@ PRODUCT_COPY_FILES := \\
 PRODUCT_COPY_FILES += \\
 EOF
 
+BLOBS=`cat proprietary-blobs.txt | grep -v ^# | grep -v ^$ | grep -v ^- | grep -v ^% | grep -v '\.apk'`
 LINEEND=" \\"
-COUNT=`cat proprietary-blobs.txt | grep -v ^# | grep -v ^$ | wc -l | awk {'print $1'}`
-for FILE in `cat proprietary-blobs.txt | grep -v ^# | grep -v ^$ | grep -v '\.apk' | sed -e 's#^/system/##g'`; do
+COUNT=`echo "$BLOBS" | wc -l | awk {'print $1'}`
+for FILE in `echo "$BLOBS" | sed -e 's#^/system/##g'`; do
     COUNT=`expr $COUNT - 1`
     if [ $COUNT = "0" ]; then
         LINEEND=""
     fi
-    if [[ ! "$FILE" =~ ^-.* ]]; then
-        FILE=`echo $FILE | sed -e "s/^-//g"`
-        echo "    $OUTDIR/proprietary/$FILE:system/$FILE$LINEEND" >> $MAKEFILE
-    fi
+
+    echo "    $OUTDIR/proprietary/$FILE:system/$FILE$LINEEND" >> $MAKEFILE
 done
 
 (cat << EOF) > ../../../$OUTDIR/$DEVICE-vendor.mk
@@ -152,6 +151,16 @@ LOCAL_PATH := \$(call my-dir)
 #LOCAL_MODULE_CLASS := APPS
 #LOCAL_CERTIFICATE := platform
 #include \$(BUILD_PREBUILT)
+
+#Override the rule for gps.default.so because someone at Qualcomm
+#make libandroid_runtime.so it's dependency needlessly.
+
+\$(call append-path,\$(PRODUCT_OUT),system/lib/hw/gps.default.so) : vendor/lge/w7/proprietary/lib/hw/gps.default.so | \$(ACP)
+	@echo "Copy and fixup: \$@"
+	\$(copy-file-to-target)
+	\$(hide) patchelf --remove-needed libandroid_runtime.so \$@
+
+ALL_DEFAULT_INSTALLED_MODULES += \$(call append-path,\$(PRODUCT_OUT),system/lib/hw/gps.default.so)
 
 endif
 
