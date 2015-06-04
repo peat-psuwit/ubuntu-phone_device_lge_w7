@@ -397,8 +397,5 @@ PRODUCT_COPY_FILES += device/lge/w7/init_wlan.sh:system/etc/init_wlan.sh
 #This is needed for shipped audio.primary.msm8226.so
 PRODUCT_PACKAGES += libaudioroute
 
-#This is needed for shipped gps.default.so
-PRODUCT_PACKAGES += libandroid_runtime
-
 $(call inherit-product, vendor/lge/w7/w7-vendor.mk)
 
