@@ -397,5 +397,8 @@ PRODUCT_COPY_FILES += device/lge/w7/init_wlan.sh:system/etc/init_wlan.sh
 #This is needed for shipped audio.primary.msm8226.so
 PRODUCT_PACKAGES += libaudioroute
 
+#This keeps time correct across reboots
+PRODUCT_PACKAGES += timekeep
+
 $(call inherit-product, vendor/lge/w7/w7-vendor.mk)
 

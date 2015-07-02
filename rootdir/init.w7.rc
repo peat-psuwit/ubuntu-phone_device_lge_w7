@@ -76,10 +76,10 @@ on property:persist.service.fakebatt=1
 on property:persist.service.fakebatt=0
     write /sys/class/power_supply/battery/pseudo_batt "0 1 100 40 4100 80 1"
 
-service time_daemon /system/bin/time_daemon
-   class late_start
-   user root
-   group root
+#service time_daemon /system/bin/time_daemon
+#   class late_start
+#   user root
+#   group root
 
 service thermal-engine /system/bin/thermal-engine
    class main
