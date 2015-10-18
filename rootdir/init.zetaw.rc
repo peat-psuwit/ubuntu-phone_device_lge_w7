@@ -970,11 +970,12 @@ on property:rild.modem_restart=silence
     write /sys/module/lge_handle_panic/parameters/gen_modem_panic 2
 
 # byungil.choi@lge.com for SW IrRC
-service irrcServer /system/bin/irrcServer
-   class main
-   user media
-   group media
-   onrestart restart irrcServer
+# irrcServer seems to crash on Ubuntu touch
+#service irrcServer /system/bin/irrcServer
+#   class main
+#   user media
+#   group media
+#   onrestart restart irrcServer
 
 # CM Performance Profiles
 # Powersave

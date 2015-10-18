@@ -131,14 +131,15 @@ service init_wlan /system/bin/sh /system/etc/init_wlan.sh
 on property:init.svc.wcnss-service=running
     start init_wlan
 
-service ppd /system/bin/mm-pp-daemon
-    class late_start
-    user system
-    socket pps stream 0660 system system graphics
-    group system graphics
+# ppd seems to crash on Ubuntu touch
+#service ppd /system/bin/mm-pp-daemon
+#    class late_start
+#    user system
+#    socket pps stream 0660 system system graphics
+#    group system graphics
 
-on property:init.svc.surfaceflinger=stopped
-    stop ppd
+#on property:init.svc.surfaceflinger=stopped
+#    stop ppd
 
 
 # Define call duration feature
