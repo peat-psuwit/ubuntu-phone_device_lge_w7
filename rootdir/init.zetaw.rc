@@ -747,13 +747,14 @@ service hcidump /system/bin/sh /system/etc/hcidump.sh
     disabled
     oneshot
 
-on property:ro.bootmode=chargerlogo
-    class_reset main
-    class_reset late_start
-    class_start charger
+# "Charger" support seems to be broken on Ubuntu touch
+#on property:ro.bootmode=chargerlogo
+#    class_reset main
+#    class_reset late_start
+#    class_start charger
 
-service charger /charger
-    class charger
+#service charger /charger
+#    class charger
 
 service ssr_diag /system/bin/ssr_diag
     class late_start
