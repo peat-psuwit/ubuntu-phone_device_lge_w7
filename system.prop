@@ -71,3 +71,4 @@ ro.lge.proximity.delay=25
 
 # Ubuntu specific property
 ril.device=qcom_msim
+urfkill.hybris.wlan=1
