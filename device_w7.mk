@@ -403,12 +403,12 @@ PRODUCT_PACKAGES += timekeep
 
 # Pulseaudio-module-droid
 PRODUCT_COPY_FILES += \
-    device/lge/w7/ubuntu/pulseaudio-droid/libdroid-sink.so:system/ubuntu/usr/lib/pulse-6.0/modules/libdroid-sink.so \
-    device/lge/w7/ubuntu/pulseaudio-droid/libdroid-source.so:system/ubuntu/usr/lib/pulse-6.0/modules/libdroid-source.so \
-    device/lge/w7/ubuntu/pulseaudio-droid/libdroid-util.so:system/ubuntu/usr/lib/pulse-6.0/modules/libdroid-util.so \
-    device/lge/w7/ubuntu/pulseaudio-droid/module-droid-card.so:system/ubuntu/usr/lib/pulse-6.0/modules/module-droid-card.so \
-    device/lge/w7/ubuntu/pulseaudio-droid/module-droid-sink.so:system/ubuntu/usr/lib/pulse-6.0/modules/module-droid-sink.so \
-    device/lge/w7/ubuntu/pulseaudio-droid/module-droid-source.so:system/ubuntu/usr/lib/pulse-6.0/modules/module-droid-source.so
+    device/lge/w7/ubuntu/pulseaudio-droid/libdroid-sink.so:system/ubuntu/usr/lib/pulse-7.1/modules/libdroid-sink.so \
+    device/lge/w7/ubuntu/pulseaudio-droid/libdroid-source.so:system/ubuntu/usr/lib/pulse-7.1/modules/libdroid-source.so \
+    device/lge/w7/ubuntu/pulseaudio-droid/libdroid-util.so:system/ubuntu/usr/lib/pulse-7.1/modules/libdroid-util.so \
+    device/lge/w7/ubuntu/pulseaudio-droid/module-droid-card.so:system/ubuntu/usr/lib/pulse-7.1/modules/module-droid-card.so \
+    device/lge/w7/ubuntu/pulseaudio-droid/module-droid-sink.so:system/ubuntu/usr/lib/pulse-7.1/modules/module-droid-sink.so \
+    device/lge/w7/ubuntu/pulseaudio-droid/module-droid-source.so:system/ubuntu/usr/lib/pulse-7.1/modules/module-droid-source.so
 
 $(call inherit-product, vendor/lge/w7/w7-vendor.mk)
 
