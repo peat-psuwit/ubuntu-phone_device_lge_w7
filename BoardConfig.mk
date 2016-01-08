@@ -233,3 +233,5 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
 	BOARD_SEPOLICY_UNION += su.te
 endif
 
+# libhybris
+BOARD_HAS_MEDIA_PLAYER_PAUSE := true
