@@ -386,11 +386,15 @@ PRODUCT_LOCALES += hdpi
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
+#This set bluetooth stack for hciattach
+PRODUCT_COPY_FILES += device/lge/w7/prebuilt/etc/bluetooth/stack.conf:system/etc/bluetooth/stack.conf
+
 # Ubuntu Overlay Files
 PRODUCT_COPY_FILES += \
     device/lge/w7/ubuntu/udev.rules:system/ubuntu/lib/udev/rules.d/70-android.rules \
     device/lge/w7/ubuntu/display.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf \
-    device/lge/w7/ubuntu/rcS:system/ubuntu/etc/default/hwclock
+    device/lge/w7/ubuntu/rcS:system/ubuntu/etc/default/hwclock \
+    device/lge/w7/ubuntu/bluetooth-touch-android.conf:system/ubuntu/etc/init/bluetooth-touch-android.conf
 
 # This kickstart wlan module in kernel.
 PRODUCT_COPY_FILES += device/lge/w7/init_wlan.sh:system/etc/init_wlan.sh
@@ -418,4 +422,3 @@ PRODUCT_COPY_FILES += \
     device/lge/w7/ubuntu/pulseaudio-droid/module-droid-source-22.so:system/ubuntu/usr/lib/pulse-7.1/modules/module-droid-source-22.so
 
 $(call inherit-product, vendor/lge/w7/w7-vendor.mk)
-
