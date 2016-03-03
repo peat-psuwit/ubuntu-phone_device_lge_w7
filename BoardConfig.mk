@@ -234,4 +234,4 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
 endif
 
 # libhybris
-BOARD_HAS_MEDIA_PLAYER_PAUSE := true
+BOARD_HAS_MEDIA_RECORDER_PAUSE := true
