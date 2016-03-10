@@ -408,18 +408,18 @@ PRODUCT_PACKAGES += timekeep
 
 # Pulseaudio-module-droid
 PRODUCT_COPY_FILES += \
-    device/lge/w7/ubuntu/pulseaudio-droid/libdroid-sink-19.so:system/ubuntu/usr/lib/pulse-7.1/modules/libdroid-sink-19.so \
-    device/lge/w7/ubuntu/pulseaudio-droid/libdroid-sink-22.so:system/ubuntu/usr/lib/pulse-7.1/modules/libdroid-sink-22.so \
-    device/lge/w7/ubuntu/pulseaudio-droid/libdroid-source-19.so:system/ubuntu/usr/lib/pulse-7.1/modules/libdroid-source-19.so \
-    device/lge/w7/ubuntu/pulseaudio-droid/libdroid-source-22.so:system/ubuntu/usr/lib/pulse-7.1/modules/libdroid-source-22.so \
-    device/lge/w7/ubuntu/pulseaudio-droid/libdroid-util-19.so:system/ubuntu/usr/lib/pulse-7.1/modules/libdroid-util-19.so \
-    device/lge/w7/ubuntu/pulseaudio-droid/libdroid-util-22.so:system/ubuntu/usr/lib/pulse-7.1/modules/libdroid-util-22.so \
-    device/lge/w7/ubuntu/pulseaudio-droid/module-droid-card-19.so:system/ubuntu/usr/lib/pulse-7.1/modules/module-droid-card-19.so \
-    device/lge/w7/ubuntu/pulseaudio-droid/module-droid-card-22.so:system/ubuntu/usr/lib/pulse-7.1/modules/module-droid-card-22.so \
-    device/lge/w7/ubuntu/pulseaudio-droid/module-droid-discover.so:system/ubuntu/usr/lib/pulse-7.1/modules/module-droid-discover.so \
-    device/lge/w7/ubuntu/pulseaudio-droid/module-droid-sink-19.so:system/ubuntu/usr/lib/pulse-7.1/modules/module-droid-sink-19.so \
-    device/lge/w7/ubuntu/pulseaudio-droid/module-droid-sink-22.so:system/ubuntu/usr/lib/pulse-7.1/modules/module-droid-sink-22.so \
-    device/lge/w7/ubuntu/pulseaudio-droid/module-droid-source-19.so:system/ubuntu/usr/lib/pulse-7.1/modules/module-droid-source-19.so \
-    device/lge/w7/ubuntu/pulseaudio-droid/module-droid-source-22.so:system/ubuntu/usr/lib/pulse-7.1/modules/module-droid-source-22.so
+    device/lge/w7/ubuntu/pulseaudio-droid/libdroid-sink-19.so:system/ubuntu/usr/lib/pulse-8.0/modules/libdroid-sink-19.so \
+    device/lge/w7/ubuntu/pulseaudio-droid/libdroid-sink-22.so:system/ubuntu/usr/lib/pulse-8.0/modules/libdroid-sink-22.so \
+    device/lge/w7/ubuntu/pulseaudio-droid/libdroid-source-19.so:system/ubuntu/usr/lib/pulse-8.0/modules/libdroid-source-19.so \
+    device/lge/w7/ubuntu/pulseaudio-droid/libdroid-source-22.so:system/ubuntu/usr/lib/pulse-8.0/modules/libdroid-source-22.so \
+    device/lge/w7/ubuntu/pulseaudio-droid/libdroid-util-19.so:system/ubuntu/usr/lib/pulse-8.0/modules/libdroid-util-19.so \
+    device/lge/w7/ubuntu/pulseaudio-droid/libdroid-util-22.so:system/ubuntu/usr/lib/pulse-8.0/modules/libdroid-util-22.so \
+    device/lge/w7/ubuntu/pulseaudio-droid/module-droid-card-19.so:system/ubuntu/usr/lib/pulse-8.0/modules/module-droid-card-19.so \
+    device/lge/w7/ubuntu/pulseaudio-droid/module-droid-card-22.so:system/ubuntu/usr/lib/pulse-8.0/modules/module-droid-card-22.so \
+    device/lge/w7/ubuntu/pulseaudio-droid/module-droid-discover.so:system/ubuntu/usr/lib/pulse-8.0/modules/module-droid-discover.so \
+    device/lge/w7/ubuntu/pulseaudio-droid/module-droid-sink-19.so:system/ubuntu/usr/lib/pulse-8.0/modules/module-droid-sink-19.so \
+    device/lge/w7/ubuntu/pulseaudio-droid/module-droid-sink-22.so:system/ubuntu/usr/lib/pulse-8.0/modules/module-droid-sink-22.so \
+    device/lge/w7/ubuntu/pulseaudio-droid/module-droid-source-19.so:system/ubuntu/usr/lib/pulse-8.0/modules/module-droid-source-19.so \
+    device/lge/w7/ubuntu/pulseaudio-droid/module-droid-source-22.so:system/ubuntu/usr/lib/pulse-8.0/modules/module-droid-source-22.so
 
 $(call inherit-product, vendor/lge/w7/w7-vendor.mk)
