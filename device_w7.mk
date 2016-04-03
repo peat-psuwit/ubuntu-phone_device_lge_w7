@@ -422,4 +422,7 @@ PRODUCT_COPY_FILES += \
     device/lge/w7/ubuntu/pulseaudio-droid/module-droid-source-19.so:system/ubuntu/usr/lib/pulse-6.0/modules/module-droid-source-19.so \
     device/lge/w7/ubuntu/pulseaudio-droid/module-droid-source-22.so:system/ubuntu/usr/lib/pulse-6.0/modules/module-droid-source-22.so
 
+# Run ADB in secure mode, because Ubuntu touch now supports it.
+ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
+
 $(call inherit-product, vendor/lge/w7/w7-vendor.mk)
