@@ -395,7 +395,8 @@ PRODUCT_COPY_FILES += \
     device/lge/w7/ubuntu/display.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf \
     device/lge/w7/ubuntu/rcS:system/ubuntu/etc/default/hwclock \
     device/lge/w7/ubuntu/bluetooth-touch-android.conf:system/ubuntu/etc/init/bluetooth-touch-android.conf \
-    device/lge/w7/ubuntu/bluetooth-touch.conf:system/ubuntu/etc/init/bluetooth-touch.conf
+    device/lge/w7/ubuntu/bluetooth-touch.conf:system/ubuntu/etc/init/bluetooth-touch.conf \
+    device/lge/w7/ubuntu/NetworkManager.conf:system/ubuntu/etc/NetworkManager/NetworkManager.conf
 
 # This kickstart wlan module in kernel.
 PRODUCT_COPY_FILES += device/lge/w7/init_wlan.sh:system/etc/init_wlan.sh
