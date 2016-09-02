@@ -399,6 +399,10 @@ PRODUCT_COPY_FILES += \
 # This kickstart wlan module in kernel.
 PRODUCT_COPY_FILES += device/lge/w7/init_wlan.sh:system/etc/init_wlan.sh
 
+# Use our own GPS config on Ubuntu
+PRODUCT_COPY_FILES += \
+    device/lge/w7/prebuilt/etc/gps.conf:system/ubuntu/etc/gps.conf
+
 #This is needed for shipped audio.primary.msm8226.so
 PRODUCT_PACKAGES += libaudioroute
 
