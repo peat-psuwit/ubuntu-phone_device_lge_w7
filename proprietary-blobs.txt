@@ -224,7 +224,7 @@ vendor/lib/libthermalioctl.so
 vendor/lib/libthermalclient.so
 
 # Gps
-%lib/hw/gps.default.so
+lib/hw/gps.default.so
 lib/libloc_core.so
 lib/libloc_eng.so
 lib/libloc_api_v02.so
