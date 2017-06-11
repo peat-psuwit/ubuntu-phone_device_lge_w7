@@ -357,5 +357,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
+# Ubuntu Overlay Files
+PRODUCT_COPY_FILES += \
+    device/lge/w7/ubuntu/udev.rules:system/ubuntu/lib/udev/rules.d/70-android.rules
+
 $(call inherit-product, vendor/lge/w7/w7-vendor.mk)
 
