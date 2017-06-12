@@ -359,7 +359,8 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Ubuntu Overlay Files
 PRODUCT_COPY_FILES += \
-    device/lge/w7/ubuntu/udev.rules:system/ubuntu/lib/udev/rules.d/70-android.rules
+    device/lge/w7/ubuntu/udev.rules:system/ubuntu/lib/udev/rules.d/70-android.rules \
+    device/lge/w7/ubuntu/display.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf
 
 $(call inherit-product, vendor/lge/w7/w7-vendor.mk)
 
