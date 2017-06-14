@@ -507,6 +507,16 @@ service wcnss-service /system/bin/wcnss_service
    group system wifi
    oneshot
 
+service init_wlan /system/bin/sh /system/etc/init_wlan.sh
+    class late_start
+    user root
+    group root
+    disabled
+    oneshot
+
+on property:init.svc.wcnss-service=running
+    start init_wlan
+
 service mmi-ril-daemon /system/bin/rild
     class main
     socket rild stream 660 root radio

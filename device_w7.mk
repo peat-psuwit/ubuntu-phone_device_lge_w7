@@ -362,5 +362,8 @@ PRODUCT_COPY_FILES += \
     device/lge/w7/ubuntu/udev.rules:system/ubuntu/lib/udev/rules.d/70-android.rules \
     device/lge/w7/ubuntu/display.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf
 
+# This kickstart wlan module in kernel.
+PRODUCT_COPY_FILES += device/lge/w7/prebuilt/etc/init_wlan.sh:system/etc/init_wlan.sh
+
 $(call inherit-product, vendor/lge/w7/w7-vendor.mk)
 
