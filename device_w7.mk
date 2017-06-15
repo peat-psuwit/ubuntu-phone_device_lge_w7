@@ -365,5 +365,8 @@ PRODUCT_COPY_FILES += \
 # This kickstart wlan module in kernel.
 PRODUCT_COPY_FILES += device/lge/w7/prebuilt/etc/init_wlan.sh:system/etc/init_wlan.sh
 
+#This keeps time correct across reboots
+PRODUCT_PACKAGES += timekeep
+
 $(call inherit-product, vendor/lge/w7/w7-vendor.mk)
 
