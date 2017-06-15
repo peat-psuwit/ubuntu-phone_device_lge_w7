@@ -91,6 +91,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.build.description", "w7ds_global_com-user 4.4.2 KOT49I.A1398228431 1398228431 release-keys");
         property_set("ro.build.fingerprint", "lge/w7ds_global_com/w7ds:4.4.2/KOT49I.A1398228431/1398228431:user/release-keys");
         property_set("persist.radio.multisim.config", "dsds");
+        property_set("ril.num_slots", "2");
     } else if (strncmp(serial, "LGD405", 6) == 0) {
         /* D405, D405n */
         if (check_cmdline("model.name=LG-D405n") == 1) {
